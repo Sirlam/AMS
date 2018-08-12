@@ -10,7 +10,26 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//User Routes
+Route::group(['middleware' => ['auth']], function(){
+  Route::get('/', array('uses' => 'UserController@index', 'as' => 'index'));
+  Route::get('logout', array('uses' => 'UserController@getLogout', 'as' => 'getLogout'));
 
-Route::get('/', function () {
-    return View::make('user.index');
+  Route::get('account', array('uses' => 'AccountController@getAccount', 'as' => 'getAccount'));
+  Route::get('all_accounts', array('uses' => 'AccountController@allAccounts', 'as' => 'allAccounts'));
+  
+  Route::group(array('before' => 'csrf'), function(){
+    Route::post('account', array('uses' => 'AccountController@postAccount', 'as' => 'postAccount'));
+  });
+
+});
+
+//Guest Routes
+Route::group(array('middleware' => 'web'), function(){
+   Route::get('register', array('uses' => 'GuestController@getRegister', 'as' => 'register'));
+   Route::get('login', array('uses' => 'GuestController@getLogin', 'as' => 'login'));
+    Route::group(array('before' => 'csrf'), function(){
+       Route::post('register', array('uses' => 'GuestController@postRegister', 'as' => 'postRegister'));
+       Route::post('login', array('uses' => 'GuestController@postLogin', 'as' => 'postLogin'));
+    });
 });

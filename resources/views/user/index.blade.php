@@ -1,5 +1,9 @@
 @extends('layout.front.master')
 
+@section('title')
+AMS - Account Management System
+@endsection
+
 @section('body')
 
 <!-- Main content -->
@@ -500,33 +504,8 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-heading no-border clearfix">
-          <h2 class="panel-title">Site Traffic</h2>
-          <ul class="panel-tool-options">
-            <li><a href="#" id="lines"><i class="icon-chart-line icon-2x"></i></a></li>
-            <li><a href="#" id="bars"><i class="icon-chart-bar icon-2x"></i></a></li>
-            <li class="dropdown">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <li><a href="#"><i class="icon-arrows-ccw"></i> Update data</a></li>
-                <li><a href="#"><i class="icon-list"></i> Detailed log</a></li>
-                <li><a href="#"><i class="icon-chart-pie"></i> Statistics</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><i class="icon-cancel"></i> Clear list</a></li>
-              </ul>
-             </li>
-          </ul>
-        </div>
-        <div class="panel-body">
-          <div class="flot-chart float-chart-lg">
-            <div id="graph-lines" class="flot-chart-content"></div>
-            <div id="graph-bars" class="flot-chart-content"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
 @stop

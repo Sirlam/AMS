@@ -6,7 +6,7 @@
 
 		<!-- Site header  -->
 		<header class="site-header">
-		  <div class="site-logo"><a href="index.html"><img src="images/logo.png" alt="AMS" title="AMS"></a></div>
+		  <div class="site-logo"><a href="{{URL::route('index')}}"><img src="images/logo.png" alt="AMS" title="AMS"></a></div>
 		  <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a></div>
 		  <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#"><i class="icon-menu"></i></a></div>
 		</header>
@@ -14,73 +14,37 @@
 
 		<!-- Main navigation -->
 		<ul id="side-nav" class="main-menu navbar-collapse collapse">
-			<li class="has-sub active "><a href="{{URL::rout('index')}}"><i class="icon-gauge"></i><span class="title">Home</span></a>
+			<li class="has-sub active "><a href="#"><i class="icon-home"></i><span class="title">Home</span></a>
 				<ul class="nav">
-					<li class="active"><a href="index.html"><span class="title">Dashboard</span></a></li>
+					<li class="active"><a href="{{URL::route('index')}}"><span class="title">Dashboard</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="collapsed-sidebar.html"><i class="icon-layout"></i><span class="title">Layouts</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-plus-circled"></i><span class="title">Account</span></a>
 				<ul class="nav collapse">
-					<li><a href="collapsed-sidebar.html"><span class="title">Collapsed Sidebar</span></a></li>
-					<li><a href="fixed-sidebar.html"><span class="title">Fixed Sidebar</span></a></li>
+					<li><a href="{{URL::route('getAccount')}}"><span class="title">Add Account</span></a></li>
+					<li><a href="#"><span class="title">All Accounts</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="panels.html"><i class="icon-newspaper"></i><span class="title">UI Elements</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-plus-circled"></i><span class="title">Income</span></a>
 				<ul class="nav collapse">
-					<li><a href="panels.html"><span class="title">Panels</span></a></li>
-					<li><a href="buttons.html"><span class="title">Buttons</span></a></li>
-					<li><a href="typography.html"><span class="title">Typography</span></a></li>
-					<li><a href="tabs-accordions.html"><span class="title">Tabs &amp; Accordions</span></a></li>
-					<li><a href="tooltips-popovers.html"><span class="title">Tooltips &amp; Popovers</span></a></li>
-					<li><a href="navbars.html"><span class="title">Navbars</span></a></li>
-					<li><a href="breadcrumbs.html"><span class="title">Breadcrumbs</span></a></li>
-					<li><a href="badges-label.html"><span class="title">Badges &amp; Labels</span></a></li>
-					<li><a href="progress-bars.html"><span class="title">Progress Bars</span></a></li>
-					<li><a href="modals.html"><span class="title">Modals</span></a></li>
-					<li><a href="alerts.html"><span class="title">Alerts</span></a></li>
-					<li><a href="pagination.html"><span class="title">Pagination</span></a></li>
-					<li><a href="video.html"><span class="title">Video</span></a></li>
+					<li><a href="#"><span class="title">Add Income</span></a></li>
+					<li><a href="#"><span class="title">All Incomes</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="basic-tables.html"><i class="icon-window"></i><span class="title">Tables</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-minus-circled"></i><span class="title">Expenses</span></a>
 				<ul class="nav collapse">
-					<li><a href="basic-tables.html"><span class="title">Basic Tables</span></a></li>
-					<li><a href="data-tables.html"><span class="title">Data Tables</span></a></li>
+					<li><a href="#"><span class="title">Add an Expense</span></a></li>
+					<li><a href="#"><span class="title">All Expenses</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="form-basic.html"><i class="icon-doc-text"></i><span class="title">Forms</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-layout"></i><span class="title">Balance Sheet</span></a>
 				<ul class="nav collapse">
-					<li><a href="form-basic.html"><span class="title">Basic Form</span></a></li>
-					<li><a href="form-advanced.html"><span class="title">Advanced Plugins</span></a></li>
-					<li><a href="form-wizard.html"><span class="title">Form Wizard</span></a></li>
-					<li><a href="file-upload.html"><span class="title">File upload</span></a></li>
-					<li><a href="editors.html"><span class="title">Editors</span></a></li>
+					<li><a href="#"><span class="title">Monthly Balance Sheet</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub">
-				<a href="#/"><i class="icon-flow-tree"></i><span class="title">Menu Levels</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-newspaper"></i><span class="title">Reports</span></a>
 				<ul class="nav collapse">
-					<li><a href="#/"><span class="title">Menu Level 1.1</span></a></li>
-					<li><a href="#/"><span class="title">Menu Level 1.2</span></a></li>
-					<li class="has-sub">
-						<a href="#/"><span class="title">Menu Level 1.3</span></a>
-						<ul class="nav collapse">
-							<li><a href="#/"><span class="title">Menu Level 2.1</span></a></li>
-							<li class="has-sub">
-								<a href="#/"><span class="title">Menu Level 2.2</span></a>
-								<ul class="nav collapse">
-									<li class="has-sub">
-										<a href="#/"><span class="title">Menu Level 3.1</span></a>
-										<ul class="nav collapse">
-											<li><a href="#/"><span class="title">Menu Level 4.1</span></a></li>
-										</ul>
-									</li>
-									<li><a href="#/"><span class="title">Menu Level 3.2</span></a></li>
-								</ul>
-							</li>
-							<li><a href="#/"><span class="title">Menu Level 2.3</span></a></li>
-						</ul>
-					</li>
+					<li><a href="#"><span class="title">Reports</span></a></li>
 				</ul>
 			</li>
 		</ul>
@@ -97,17 +61,16 @@
 
 		<!-- User info -->
 		<ul class="user-info pull-left">
-		  <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg">John Henderson <span class="caret"></span></a>
+		  <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg">{{Auth::user()->name}} &#9660;</a>
 
 			<!-- User action menu -->
 			<ul class="dropdown-menu">
 
 			  <li><a href="#/"><i class="icon-user"></i>My profile</a></li>
 			  <li><a href="#/"><i class="icon-mail"></i>Messages</a></li>
-			  <li><a href="#"><i class="icon-clipboard"></i>Tasks</a></li>
 			  <li class="divider"></li>
 			  <li><a href="#"><i class="icon-cog"></i>Account settings</a></li>
-			  <li><a href="#"><i class="icon-logout"></i>Logout</a></li>
+			  <li><a href="{{URL::route('getLogout')}}"><i class="icon-switch"></i>Logout</a></li>
 			</ul>
 			<!-- /user action menu -->
 

@@ -14,8 +14,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'users';
+
+    public $primaryKey = 'id';
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'dept_id',
     ];
 
     /**
@@ -26,4 +30,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function department()
+    {
+      return $this->hasOne('App\Department');
+    }
+
+    public function accounts()
+    {
+      return $this->hasMany('App\Account');
+    }
 }
