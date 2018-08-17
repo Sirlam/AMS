@@ -25,11 +25,12 @@ AMS - Edit Account
 						</ul>
 					</div>
 					<div class="panel-body">
-						 <form class="form-horizontal" method="post" action="{{url('edit_account/'.$account->id)}}" method="post" enctype="multipart/form-data">
+						 <form class="form-horizontal" method="post" action="{{url('edit_account/' . $account->id)}}">
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Account Name</label>
 								<div class="col-sm-10">
-									<input type="text" placeholder="Name of the account" id="name" name="name" class="form-control input-lg">
+                  <!--<input type="text" value="{{$account->id}}" placeholder="ID" id="id" name="id" class="form-control input-lg hidden">-->
+									<input type="text" value="{{$account->name}}" placeholder="Name of the account" id="name" name="name" class="form-control input-lg">
                   @if($errors->has('name'))
           				    <span class="help-block text-danger"><i class="icon-cancel-circle2 position-left"></i> {{$errors->first('name')}}</span>
           				@endif
@@ -39,7 +40,7 @@ AMS - Edit Account
 							<div class="form-group">
 								<label class="col-sm-2 control-label">Description</label>
 								<div class="col-sm-10">
-									<input type="text" placeholder="Description of the account" id="description" name="description" class="form-control input-lg">
+									<input type="text" value="{{$account->description}}" placeholder="Description of the account" id="description" name="description" class="form-control input-lg">
                   @if($errors->has('description'))
           				    <span class="help-block text-danger"><i class="icon-cancel-circle2 position-left"></i> {{$errors->first('description')}}</span>
           				@endif

@@ -28,10 +28,27 @@ class AccountController extends Controller
     }
 
     public function postEditAccount($id){
+      //$id = Input::get('id');
       $account = Account::find($id);
       $users = User::all();
 
-      return view('user.edit_account')->with('account', $account)->with('users', $users);
+      $validate = Validator::make(Input::all(), array(
+         'name' => 'required|min:3',
+         'description' => 'required|min:3',
+      ));
+
+      if($validate->fails()){
+          return Redirect::back()->with('account', $account)->with('users', $users)->withErrors($validate)->withInput();
+      }else{
+        $account->name = Input::get('name');
+        $account->description = Input::get('description');
+        //$updateAccount = DB::table('accounts')->where([['id', '=', $id]])->update(['name' => $new_name, 'description' => $new_desc]);
+        if ($account->update()) {
+            return Redirect::route('allAccounts')->with('success', 'Account Modified');
+        } else {
+            return Redirect::back()->with('fail', 'Something went wrong, please try again later');
+        }
+      }
     }
 
     public function deleteAccount(){
