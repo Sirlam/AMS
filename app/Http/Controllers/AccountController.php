@@ -42,6 +42,7 @@ class AccountController extends Controller
       }else{
         $account->name = Input::get('name');
         $account->description = Input::get('description');
+        $account->last_updated_by = Auth::id();
         //$updateAccount = DB::table('accounts')->where([['id', '=', $id]])->update(['name' => $new_name, 'description' => $new_desc]);
         if ($account->update()) {
             return Redirect::route('allAccounts')->with('success', 'Account Modified');

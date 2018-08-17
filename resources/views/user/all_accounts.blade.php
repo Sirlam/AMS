@@ -12,7 +12,12 @@ AMS - All Accounts
 				<div class="col-lg-12">
 					<div class="panel panel-default">
 						<div class="panel-heading clearfix">
-							<h3 class="panel-title">All Accounts</h3>
+							<h3 class="panel-title">All Accounts</h3><br>
+              @if (Session::has('success'))
+          				<span class="help-block text-primary"> {{ Session::get('success') }}</span>
+              @elseif (Session::has('fail'))
+          				<span class="help-block text-danger"> {{ Session::get('fail') }}</span>
+              @endif
 							<ul class="panel-tool-options">
 								<li><a data-rel="collapse" href="#"><i class="icon-down-open"></i></a></li>
 								<li><a data-rel="reload" href="#"><i class="icon-arrows-ccw"></i></a></li>
