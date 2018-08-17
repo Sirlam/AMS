@@ -17,9 +17,11 @@ Route::group(['middleware' => ['auth']], function(){
 
   Route::get('account', array('uses' => 'AccountController@getAccount', 'as' => 'getAccount'));
   Route::get('all_accounts', array('uses' => 'AccountController@allAccounts', 'as' => 'allAccounts'));
-  
+  Route::get('edit_account/{id}', array('uses' => 'AccountController@getEditAccount', 'as' => 'getEditAccount'));
+
   Route::group(array('before' => 'csrf'), function(){
     Route::post('account', array('uses' => 'AccountController@postAccount', 'as' => 'postAccount'));
+    Route::post('edit_account/{id}', array('uses' => 'AccountController@postEditAccount', 'as' => 'postEditAccount'));
   });
 
 });

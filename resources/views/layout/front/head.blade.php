@@ -22,6 +22,10 @@
 <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 <!-- /bootstrap stylesheet min version -->
 
+<!-- Data-tables stylesheet min version -->
+<link href="{{URL::asset('css/jquery.dataTables.css')}}" rel="stylesheet" type="text/css">
+<!-- data-tables stylesheet min version -->
+
 <!-- Mouldifi core stylesheet -->
 <link href="{{URL::asset('css/mouldifi-core.css')}}" rel="stylesheet" type="text/css">
 <!-- /mouldifi core stylesheet -->

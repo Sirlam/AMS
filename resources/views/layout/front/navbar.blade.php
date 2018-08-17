@@ -22,7 +22,7 @@
 			<li class="has-sub"><a href="#"><i class="icon-plus-circled"></i><span class="title">Account</span></a>
 				<ul class="nav collapse">
 					<li><a href="{{URL::route('getAccount')}}"><span class="title">Add Account</span></a></li>
-					<li><a href="#"><span class="title">All Accounts</span></a></li>
+					<li><a href="{{URL::route('allAccounts')}}"><span class="title">All Accounts</span></a></li>
 				</ul>
 			</li>
 			<li class="has-sub"><a href="#"><i class="icon-plus-circled"></i><span class="title">Income</span></a>

@@ -30,3 +30,11 @@
 
 <!--ChartJs-->
 <script type="text/javascript" src="{{URL::asset('js/plugins/chartjs/Chart.min.js')}}"></script>
+
+<!--Data-tables-->
+<script type="text/javascript" src="{{URL::asset('js/plugins/data-tables/jquery.dataTables.js')}}"></script>
+<script type="text/javascript">
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>

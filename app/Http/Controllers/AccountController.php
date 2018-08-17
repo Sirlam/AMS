@@ -20,6 +20,23 @@ class AccountController extends Controller
       return view('user.account');
     }
 
+    public function getEditAccount($id){
+      $account = Account::find($id);
+      $users = User::all();
+
+      return view('user.edit_account')->with('account', $account)->with('users', $users);
+    }
+
+    public function postEditAccount($id){
+      $account = Account::find($id);
+      $users = User::all();
+
+      return view('user.edit_account')->with('account', $account)->with('users', $users);
+    }
+
+    public function deleteAccount(){
+    }
+
     public function postAccount(Request $request){
       $validate = Validator::make(Input::all(), array(
          'name' => 'required|unique:accounts|min:3',
@@ -46,13 +63,9 @@ class AccountController extends Controller
       }
     }
 
-    public function editAccount(){
-    }
-
-    public function deleteAccount(){
-    }
-
     public function allAccounts(){
-      return view('user.all_accounts');
+      $accounts = Account::all();
+      $users = User::all();
+      return view('user.all_accounts')->with('accounts', $accounts)->with('users', $users);
     }
 }
