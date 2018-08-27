@@ -50,8 +50,8 @@ AMS - Add Account
 								<label class="col-sm-2 control-label">Starting Balance</label>
 								<div class="col-sm-10">
 									<input type="number" placeholder="Initial Balance" id="starting_balance" name="starting_balance" value="0" min="0" class="form-control input-lg">
-                  @if($errors->has('description'))
-          				    <span class="help-block text-danger"><i class="icon-cancel-circle2 position-left"></i> {{$errors->first('description')}}</span>
+                  @if($errors->has('starting_balance'))
+          				    <span class="help-block text-danger"><i class="icon-cancel-circle2 position-left"></i> {{$errors->first('starting_balance')}}</span>
           				@endif
 								</div>
 							</div>

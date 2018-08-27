@@ -35,6 +35,11 @@
 <script type="text/javascript" src="{{URL::asset('js/plugins/data-tables/jquery.dataTables.js')}}"></script>
 <script type="text/javascript">
 $(document).ready( function () {
-    $('#myTable').DataTable();
+    $('#myTable').DataTable({
+			"language": {
+            "decimal": ",",
+            "thousands": "."
+        }
+		});
 } );
 </script>

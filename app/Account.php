@@ -32,4 +32,9 @@ class Account extends Model
      {
        return $this->belongsTo('App\User');
      }
+
+     public function incomes()
+     {
+       return $this->hasMany('App\Income');
+     }
 }

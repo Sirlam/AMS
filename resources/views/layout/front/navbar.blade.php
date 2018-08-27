@@ -19,7 +19,7 @@
 					<li class="active"><a href="{{URL::route('index')}}"><span class="title">Dashboard</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="#"><i class="icon-plus-circled"></i><span class="title">Account</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-book"></i><span class="title">Account</span></a>
 				<ul class="nav collapse">
 					<li><a href="{{URL::route('getAccount')}}"><span class="title">Add Account</span></a></li>
 					<li><a href="{{URL::route('allAccounts')}}"><span class="title">All Accounts</span></a></li>
@@ -27,8 +27,8 @@
 			</li>
 			<li class="has-sub"><a href="#"><i class="icon-plus-circled"></i><span class="title">Income</span></a>
 				<ul class="nav collapse">
-					<li><a href="#"><span class="title">Add Income</span></a></li>
-					<li><a href="#"><span class="title">All Incomes</span></a></li>
+					<li><a href="{{URL::route('getIncome')}}"><span class="title">Add Income</span></a></li>
+					<li><a href="{{URL::route('allIncomes')}}"><span class="title">All Incomes</span></a></li>
 				</ul>
 			</li>
 			<li class="has-sub"><a href="#"><i class="icon-minus-circled"></i><span class="title">Expenses</span></a>
@@ -37,14 +37,22 @@
 					<li><a href="#"><span class="title">All Expenses</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="#"><i class="icon-layout"></i><span class="title">Balance Sheet</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-layout"></i><span class="title">Stock Management</span></a>
 				<ul class="nav collapse">
-					<li><a href="#"><span class="title">Monthly Balance Sheet</span></a></li>
+					<li><a href="#"><span class="title">Assets</span></a></li>
+					<li><a href="#"><span class="title">Liabilities</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="#"><i class="icon-newspaper"></i><span class="title">Reports</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-book-open"></i><span class="title">Reports</span></a>
 				<ul class="nav collapse">
-					<li><a href="#"><span class="title">Reports</span></a></li>
+					<li><a href="#"><span class="title">Income &amp; Expenditure Reports</span></a></li>
+					<li><a href="#"><span class="title">Balance Sheet</span></a></li>
+				</ul>
+			</li>
+			<li class="has-sub"><a href="#"><i class="icon-users"></i><span class="title">User Management</span></a>
+				<ul class="nav collapse">
+					<li><a href="#"><span class="title">Add User</span></a></li>
+					<li><a href="#"><span class="title">Remove User</span></a></li>
 				</ul>
 			</li>
 		</ul>

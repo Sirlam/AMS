@@ -19,9 +19,17 @@ Route::group(['middleware' => ['auth']], function(){
   Route::get('all_accounts', array('uses' => 'AccountController@allAccounts', 'as' => 'allAccounts'));
   Route::get('edit_account/{id}', array('uses' => 'AccountController@getEditAccount', 'as' => 'getEditAccount'));
 
+  Route::get('income', array('uses' => 'IncomeController@getIncome', 'as' => 'getIncome'));
+  Route::get('all_incomes', array('uses' => 'IncomeController@allIncomes', 'as' => 'allIncomes'));
+  Route::post('edit_income/{id}', array('uses' => 'IncomeController@postEditIncome', 'as' => 'postEditIncome'));
+
   Route::group(array('before' => 'csrf'), function(){
     Route::post('account', array('uses' => 'AccountController@postAccount', 'as' => 'postAccount'));
     Route::post('edit_account/{id}', array('uses' => 'AccountController@postEditAccount', 'as' => 'postEditAccount'));
+
+    Route::post('income', array('uses' => 'IncomeController@postIncome', 'as' => 'postIncome'));
+    Route::post('edit_income/{id}', array('uses' => 'IncomeController@postEditIncome', 'as' => 'postEditIncome'));
+    Route::post('all_incomes', array('uses' => 'IncomeController@postAllIncomes', 'as' => 'postAllIncomes'));
   });
 
 });

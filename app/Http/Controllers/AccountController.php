@@ -74,7 +74,7 @@ class AccountController extends Controller
         $account->last_updated_by = Auth::user()->id;
 
         if($account->save()){
-              return Redirect::route('getAccount')->with('success', 'Account Added');
+              return Redirect::route('allAccounts')->with('success', 'Account Added');
           }else{
               return Redirect::route('getAccount')->with('fail', 'An error occurred');
           }
